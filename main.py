@@ -1,14 +1,26 @@
-import cv2
+# Imports
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
 
-cap = cv2.VideoCapture(0)
+import tensorflow as tf
+import tensorflow_datasets as tfds
+from tensorflow import keras
+tfds.disable_progress_bar()
 
-while True:
-    ret, frame = cap.read()
-    cv2.imshow('Video', frame)
+# Get info from RPS dataset
+builder = tfds.builder('rock_paper_scissors')
+info = builder.info
 
-    c = cv2.waitKey(1)
-    if c == 27:
-        break
+# Load in and prepare RPS data
+ds_train = tfds.load(name="rock_paper_scissors", split="train")
+ds_test = tfds.load(name="rock_paper_scissors", split="test")
 
-cap.release()
-cv2.destroyAllWindows()
+# Convert data to numpy arrays, make images grayscale
+train_images = np.array([example['image'].numpy()[:, :, 0] for example in ds_train])
+train_labels = np.array([example['label'].numpy() for example in ds_train])
+
+test_images = np.array([example['image'].numpy()[:, :, 0] for example in ds_test])
+test_labels = np.array([example['label'].numpy() for example in ds_test])
+
+print(test_images.shape)
