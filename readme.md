@@ -5,11 +5,12 @@ This project contains a CNN model for detecting hand gestures using a rock, pape
 ![rps](https://user-images.githubusercontent.com/57796369/94271755-5b207680-ff42-11ea-94b1-f468c7f0b577.gif)
 
 ## Dependencies
-1. Tensorflow
-2. Tensorflow-datasets
-3. Keras
-4. OpenCV-python
-5. NumPy
+1. [Tensorflow](https://www.tensorflow.org/)
+2. [Tensorflow-datasets](https://www.tensorflow.org/datasets)
+3. [Keras](https://keras.io/)
+4. [OpenCV-python](https://opencv.org/)
+5. [NumPy](https://numpy.org/)
+
 
 
 ## Installing and running the application
@@ -23,6 +24,7 @@ python play.py
 ```
 
 2. When the program starts, a webcam feed will pop up. Hold your hand in the indicated white square and the application will print the classification of your handgesture ('rock', 'paper' or 'scissors').
+
 
 
 ## Developer guide
@@ -220,4 +222,6 @@ We extract the image from the square frame, and convert it to RGB with `cv2.cvtC
 To predict our user's gesture, use NumPy to reshape the way our image data is represented. Then we put the newly formatted image data in `model.predict`, which returns a number from 0 to 2. We map a gesture-category name to that number and print this category.
 Lastly, we use `cv2.imshow` to give us a pop-up with the output of the current frame. We're basically seeing a live video from our webcams. To stop the loop, press the 'q' button.
 
-That's all the files for now! I hope this documentation was helpful and I will surely keep working on this project going forward. Thank you for reading!
+
+## That's it!
+That's all for now! I hope this documentation was helpful and I will surely keep working on this project going forward. Thank you for reading!
