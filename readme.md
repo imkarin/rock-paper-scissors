@@ -2,7 +2,14 @@
 This project contains a CNN model for detecting hand gestures using a rock, paper, scissors dataset. It recognizes and classifies handgestures from the user's camera.
 
 
-[screenshot]
+![rps](https://user-images.githubusercontent.com/57796369/94271755-5b207680-ff42-11ea-94b1-f468c7f0b577.gif)
+
+## Dependencies
+1. Tensorflow
+2. Tensorflow-datasets
+3. Keras
+4. OpenCV-python
+5. NumPy
 
 
 ## Installing and running the application
