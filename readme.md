@@ -26,7 +26,6 @@ python play.py
 2. When the program starts, a webcam feed will pop up. Hold your hand in the indicated white square and the application will print the classification of your handgesture ('rock', 'paper' or 'scissors').
 
 
-
 ## Developer guide
 Throughout the entire code, you'll find comments explaining its use and how you can change it. Here, we'll go through the files step by step and explain the code even further.
 
